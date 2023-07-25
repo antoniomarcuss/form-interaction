@@ -81,29 +81,27 @@ const inputPasswordLength = (inputPassword, maxLength) =>{
 }
 
 form.addEventListener('submit', (event) => {
-      event.preventDefault()
-      const { username, email, password, confirmPassword } = event.target
-    
-      const usernameValue = username.value.trim()
-      const emailValue = email.value.trim()
-      const passwordValue = password.value.trim()
-      const confirmPasswordValue = confirmPassword.value.trim()
-    
-      const usernameError = validateUsername(usernameValue)
-      const emailError = validateEmail(emailValue)
-      const passwordError = validatePassword(passwordValue)
-      const confirmPasswordError = validateConfirmPassword(confirmPasswordValue, passwordValue)
-    
-      setFieldValidation(username, usernameError)
-      setFieldValidation(email, emailError)
-      setFieldValidation(password, passwordError)
-      setFieldValidation(confirmPassword, confirmPasswordError)
-    
-      if (!usernameError && !emailError && !passwordError && !confirmPasswordError) {
-        form.submit()
-        formSent()
-      }
-    })
+    event.preventDefault()
+    const { username, email, password, confirmPassword } = event.target
+    const usernameValue = username.value.trim()
+    const emailValue = email.value.trim()
+    const passwordValue = password.value.trim()
+    const confirmPasswordValue = confirmPassword.value.trim()
+
+    const usernameError = validateUsername(usernameValue)
+    const emailError = validateEmail(emailValue)
+    const passwordError = validatePassword(passwordValue)
+    const confirmPasswordError = validateConfirmPassword(confirmPasswordValue, passwordValue)
+
+    setFieldValidation(username, usernameError)
+    setFieldValidation(email, emailError)
+    setFieldValidation(password, passwordError)
+    setFieldValidation(confirmPassword, confirmPasswordError)
+
+    if (!usernameError && !emailError && !passwordError && !confirmPasswordError) {
+    formSent()
+    }
+})
 
 form.addEventListener('input', event =>{
     const clickedElement = event.target
