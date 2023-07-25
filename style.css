@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(img/chuva.jpg);
+    background-position:center center;
+    background-size: cover;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.758);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.345);
+}
+
+header h1 {
+    padding-bottom: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+}
+
+input{
+    display: block;
+    width: 100%;
+    background-color: rgba(7, 7, 7, 0.532);
+    box-shadow: 1px 1px 1px 1px rgba(71, 71, 71, 0.443);
+    margin: 5px 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid  #384740;
+    padding-right: 25px;
+    color: white;
+}
+
+
+input:focus{
+    border: 2px solid #687681;
+    transition: 0.5s;
+}
+
+section i{
+    position: absolute;
+    top: 35px;
+    right: 5px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #1e8379;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(220, 229, 227);
+    font-weight: 600;
+    font-size: 17px;
+
+}
+
+button:hover{
+    background-color: #0fa193;
+    
+}
+
+section i.success, i.error{
+    visibility: hidden;
+}
+
+section.success i.success {
+    visibility: visible;
+}
+
+section.error i.error {
+    visibility: visible;
+}
+
+section.success input{
+    border: 2px solid rgb(1, 255, 170);
+}
+section.error input{
+    border: 2px solid red;
+}
+
+section small {
+    visibility: hidden;
+}
+
+section.error small{
+    color: rgb(252, 6, 6);
+    visibility: visible;
+}
+
+.isValid {
+    max-width: 450px;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.confirm .success {
+    font-size: 30px;
+}
+
+.confirm {
+   display: flex;
+   align-items: center;
+   margin-top: 10px;
+   gap: 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+

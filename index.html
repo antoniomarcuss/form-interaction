@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form interaction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="#" autocomplete="off">
+            <header><h1>Criar Conta</h1></header>
+            <section>
+                <label>Nome
+                    <input type="text" id="username" autofocus>
+                </label>    
+                <i class="fa-solid fa-circle-check success" style="color: #01ffaa;"></i>
+               <i class="fa-solid fa-circle-exclamation error" style="color: #ff0000;"></i>
+                <small id="erro"></small>
+            </section>
+            <section>
+                <label>E-mail
+                    <input type="email" id="email" >
+                </label>
+                <i class="fa-solid fa-circle-check success" style="color: #01ffaa;"></i>
+               <i class="fa-solid fa-circle-exclamation error" style="color: #ff0000;"></i>
+                <small id="erro"></small>
+            </section>
+            <section>
+                <label>Senha
+                    <input type="password" id="password">
+                </label>
+                <i class="fa-solid fa-circle-check success" style="color: #01ffaa;"></i>
+               <i class="fa-solid fa-circle-exclamation error" style="color: #ff0000;"></i>
+                <small id="erro"></small>
+            </section>
+            <section>
+                <label>Confirma Senha
+                    <input type="password" id="confirmPassword">
+                </label>
+                <i class="fa-solid fa-circle-check success" style="color: #01ffaa;"></i>
+               <i class="fa-solid fa-circle-exclamation error" style="color: #ff0000;"></i>
+                <small id="erro"></small>
+            </section>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="isValid hidden">
+            <h1>Parabéns</h1>
+            <div class="confirm">
+                <h3>Email confirmado</h3>
+                <i class="fa-solid fa-circle-check success" style="color: #01ffaa;"></i>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
